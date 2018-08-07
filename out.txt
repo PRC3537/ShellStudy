@@ -1,0 +1,41 @@
+     1	README.md
+     2	demoOne.sh
+     3	getopt_abc.sh
+     4	getopts_test.sh
+     5	out.txt
+     6	password.sh
+     7	sum.sh
+     8	time_take.sh
+            ;;
+            ;;
+            break
+            echo "$OPTARG"
+            echo "--"
+            echo "??"
+            echo "b" 
+            echo "c"
+            shift
+            shift
+            shift;;
+            shift;;
+            shift;;
+        *) 
+        --)
+        -a)
+        -b) 
+        -c) 
+    case "$1" in
+    echo Does not exits;
+    echo File exits;
+    esac
+#!/bin/bash
+#!/bin/bash
+ARGS=`getopt -o abc -- "$@"`
+done
+else
+eval set -- "$ARGS"
+fi
+fpath = "./sum.sh"
+if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
+if [ -e $fpath]; then
+while true;do

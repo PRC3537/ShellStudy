@@ -1,5 +1,5 @@
 #!/bin/bash
-ARGS=`getopt -o :a:b: -- "$@"`
+ARGS=`getopt -o a:b: -- "$@"`
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
 eval set -- "$ARGS"
 while true;do

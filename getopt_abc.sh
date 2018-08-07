@@ -1,5 +1,5 @@
 #!/bin/bash
-ARGS=`getopt -o :a:b:c: -- "$@"`
+ARGS=`getopt -o abc -- "$@"`
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
 eval set -- "$ARGS"
 while true;do
@@ -8,7 +8,7 @@ while true;do
             echo "$OPTARG"
             shift;;
         -b) 
-            echo "b"
+            echo "b" 
             shift;;
         -c) 
             echo "c"

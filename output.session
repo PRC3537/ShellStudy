@@ -1,0 +1,51 @@
+Script started on Tue Aug  7 17:22:26 2018
+[?1034hbash-3.2$ ls
+README.md	getopt_abc.sh	if_else.sh	output.session	sum.sh		toming.log
+demoOne.sh	getopts_test.sh	out.txt		password.sh	time_take.sh
+bash-3.2$ cat -n sun[Km.sh
+     1	#!/bin/bash
+     2	ARGS=`getopt -o a:b: -- "$@"`
+     3	if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
+     4	eval set -- "$ARGS"
+     5	while true;do
+     6	    case "$1" in
+     7	        -a)
+     8	            # min=
+     9	            echo "$OPTARG"
+    10	            shift;;
+    11	        -b) 
+    12	            # max=$OPTARG
+    13	            echo "$OPTARG"
+    14	            shift;;
+    15	        -c) 
+    16	            echo "c"
+    17	            shift;;
+    18	        --)
+    19	            echo "--"
+    20	            shift
+    21	            break
+    22	            ;;
+    23	        *) 
+    24	            echo "??"
+    25	            shift
+    26	            ;;
+    27	    esac
+    28	done
+    29	
+    30	
+    31	function add(){
+    32	    sum=0
+    33	    for ((i=$min; i<$max; i++))
+    34	    do
+    35	        let "sum+=$i"
+    36	    done
+    37	    echo "sum=$sum"
+    38	   
+    39	}
+    40	add $1 $2;
+    41	    
+    42	
+bash-3.2$ exit
+exit
+
+Script done on Tue Aug  7 17:23:13 2018
